@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+import es.diputacion.malaga.translater.util.Utilidades;
+
 public abstract class ExcelToScript {
 
 	/**
@@ -37,7 +39,7 @@ public abstract class ExcelToScript {
 			txt = new PrintStream(ftxt);
 
 		} catch (Exception e) {
-			System.out.println("Error -->" + e);
+			Utilidades.log("Error -->" + e);
 			txt.close();
 			txt = null;
 		}

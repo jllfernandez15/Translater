@@ -109,7 +109,6 @@ public class Utilidades {
 
 		Hashtable<String, String> hash = new Hashtable<String, String>();
 
-		// System.out.println(" Fichero Excel -->" + xlsFile);
 		Workbook workbook = ExcelUtil.getBook(xlsFile);
 
 		ArrayList<Object[]> arr = ExcelUtil.parserSheet(workbook, 0);

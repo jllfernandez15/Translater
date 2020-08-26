@@ -24,9 +24,9 @@ public class ImageUtil {
 			prop.load(is);
 
 		} catch (FileNotFoundException fnfe) {
-			System.out.println("" + fnfe);
+			Utilidades.log("" + fnfe);
 		} catch (IOException ioe) {
-			System.out.println("" + ioe);
+			Utilidades.log("" + ioe);
 		}
 
 	}
@@ -46,7 +46,7 @@ public class ImageUtil {
 			return new ImageIcon(imageData);
 
 		} catch (Exception e) {
-			System.out.println("Error al capturar la imagen ..." + e);
+			Utilidades.log("Error al capturar la imagen ..." + e);
 			return null;
 		}
 	}
@@ -80,7 +80,7 @@ public class ImageUtil {
 			Runtime rt = Runtime.getRuntime();
 			Process p = rt.exec(source);
 			InputStream is = p.getErrorStream();
-			System.out.println("Size ... " + is.available());
+			Utilidades.log("Size ... " + is.available());
 			byte[] array = new byte[is.available()];
 			is.read(array);
 
@@ -89,7 +89,7 @@ public class ImageUtil {
 			return result;
 
 		} catch (java.io.IOException e) {
-			System.out.println("Error al ejecutar ... " + e);
+			Utilidades.log("Error al ejecutar ... " + e);
 			return "Error al ejecutar ... " + e;
 		}
 	}

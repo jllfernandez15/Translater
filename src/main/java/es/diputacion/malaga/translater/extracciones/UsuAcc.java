@@ -42,7 +42,6 @@ public class UsuAcc extends ExcelToScript {
 	 */
 	protected void translate(String xlsFile) {
 
-		// System.out.println(" Fichero Excel -->" + xlsFile);
 		Workbook workbook = ExcelUtil.getBook(xlsFile);
 
 		ArrayList<Object[]> arr = ExcelUtil.parserSheet(workbook, 0);

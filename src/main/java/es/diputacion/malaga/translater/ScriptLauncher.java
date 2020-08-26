@@ -307,7 +307,6 @@ public class ScriptLauncher extends JDialog implements ActionListener {
 			// Exit
 			System.exit(0);
 		} else if (ae.getSource() == limpiaDialog) {
-			// System.out.println("Limpia");
 			// Clean the form
 			usuario.setText("");
 			ejercicio.setText("");
@@ -326,7 +325,6 @@ public class ScriptLauncher extends JDialog implements ActionListener {
 			crear.setEnabled(false);
 
 		} else if (ae.getSource() == limpiaForm) {
-			// System.out.println("Limpia Form");
 			// Clean the form
 			usuario.setText("");
 			ejercicio.setText("");
@@ -381,7 +379,7 @@ public class ScriptLauncher extends JDialog implements ActionListener {
 
 			File f = jfc.getSelectedFile();
 			xlsFile = f.getAbsolutePath();
-			// System.out.println("xlsFile -->" + xlsFile);
+
 			tfFile.setText(xlsFile);
 			if (isXlsFile(xlsFile)) {
 				codPeticiones = Utilidades.getCodePeticiones(xlsFile);

@@ -22,7 +22,7 @@ public class ExcelUtil {
 			// Sheet[] arr = workbook.getSheets();
 
 		} catch (Exception e) {
-			System.out.println("Error --->" + e.toString());
+			Utilidades.log("Error --->" + e.toString());
 		}
 
 		return workbook;
@@ -37,7 +37,7 @@ public class ExcelUtil {
 					book));
 
 		} catch (Exception e) {
-			System.out.println("Error --->" + e.toString());
+			Utilidades.log("Error --->" + e.toString());
 		}
 
 		return workbook;
@@ -68,7 +68,7 @@ public class ExcelUtil {
 					// Number number = new Number(0, pos, posRows);
 					Cell cell = s.getCell(posColumns, posRows);
 					Object data = cell.getContents();
-					// System.out.println("strValue en Fila -->" + posRows
+					// Utilidades.log("strValue en Fila -->" + posRows
 					// + " y columna " + posColumns + " : "
 					// + data.toString());
 
@@ -79,7 +79,7 @@ public class ExcelUtil {
 			}
 
 		} catch (Exception e) {
-			System.out.println("Error --->" + e.toString());
+			Utilidades.log("Error --->" + e.toString());
 		}
 
 		return result;
